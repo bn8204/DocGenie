@@ -13,5 +13,6 @@ dependencies:
     - torchaudio
     - transformers
     - datasets
+    - accelerate
     - pytest
     
