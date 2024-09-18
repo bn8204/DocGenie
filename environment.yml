@@ -13,7 +13,12 @@ dependencies:
       
   # Add any other conda dependencies here
   # For example, if you use numpy, add the following:
-  # - numpy
+  - torch
+  - torchvision
+  - torchaudio
+  - transformers
+  - datasets
+  
 
 # Optional: Include environment variables if necessary
 # variables:
