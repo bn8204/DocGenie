@@ -1,0 +1,58 @@
+.md-search__voice {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+#voice-search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+#voice-search-button img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.glightbox-container img {
+    cursor: pointer; /* Hand cursor for images */
+    zoomable: false;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.glightbox-container {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover; /* Adjust if needed */
+  }
+
+.modal {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly dark background */
+}
+
+.modal-img {
+    width: 40px;  /* Adjust the size of the image */
+    height: 40px; /* Adjust the size of the image */
+    margin-bottom: 20px; /* Space between the image and the text */
+}
+
+#transcribed-text {
+    color: white;
+    text-align: center;  /* Centers the text */
+    font-size: 18px;
+    margin-top: 10px; /* Space between the text and the modal boundary */
+}

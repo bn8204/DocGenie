@@ -1,0 +1,43 @@
+site_name: तकनीकी दस्तावेज़ साइट
+docs_dir: '../../docs/hi'                           # Where to find the Hindi markdown files
+site_dir: '../../generated/hi'
+theme:
+  name: 'material'
+  custom_dir: 'overrides/'
+  language: hi
+
+nav:
+  - होम: index.md
+  - सभी रीड्स डिवाइस: Device Data All Reads View.md
+  - डिवाइस चार्ट: Device Data Chart View.md
+  - डिवाइस टाइम एलाइन: Device Data Time Aligned View.md
+  - डिवाइस विस्तृत: Device Data Detailed View.md
+  - डिवाइस चार्ट पढ़ता है: Device Reads Chart.md
+  - खोज संग्रहित करें: Saved Search.md
+  - जानकारी खोजें: Search Information.md
+  - दिन मीटर रीडिंग: DayReadsView.md
+  - वा विवरण: TheServiceDetails.md
+
+
+extra:
+  alternate:
+    - name: हिंदी
+      locale: hi
+#      lang: hi
+#    - name: English
+##      link: /en/
+#      locale: en
+
+dev_addr: 127.0.0.1:8000
+extra_css:
+  - ./stylesheets/extra.css
+  - ./stylesheets/modalstyle.css
+  - https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css
+
+extra_javascript:
+  - ./javascripts/voice_search.js
+  -  https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js
+  - ./javascripts/imagezoomlightbox.js
+
+plugins:
+  - search

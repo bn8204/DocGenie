@@ -1,0 +1,41 @@
+site_name: Technical Documentation Site
+docs_dir: '../../docs/en'                           # Where to find the Hindi markdown files
+site_dir: '../../generated/en'
+theme:
+  name: 'material'
+  custom_dir: 'overrides/'
+  language: en
+
+nav:
+  - Home: index.md
+  - Device Chart: Device Data Chart View.md
+  - Device TimeAlign: Device Data Time Aligned View.md
+  - Device Detailed: Device Data Detailed View.md
+  - Device Data Reads: Device Data All Reads View.md
+  - Saved Search: Saved Search.md
+  - Search Information: Search Information.md
+  - DayReadsView: DayReadsView.md
+  - ServiceDetails: TheServiceDetails.md
+  - Device Reads Chart: Device Reads Chart.md
+  - Service Summary: SummaryOfServiceDelivery.md
+  - Filter Readings: ReadingFilterDetails.md
+
+extra:
+  alternate:
+    - name: English
+#      link: /en/
+      locale: en
+
+dev_addr: 127.0.0.1:8000
+extra_css:
+  - ./stylesheets/extra.css
+  - ./stylesheets/modalstyle.css
+  - https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css
+
+extra_javascript:
+  - ./javascripts/voice_search.js
+  -  https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js
+  - ./javascripts/imagezoomlightbox.js
+
+plugins:
+  - search

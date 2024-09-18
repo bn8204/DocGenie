@@ -1,0 +1,96 @@
+{#-
+  This file was automatically generated - do not edit
+-#}
+{% set class = "md-header" %}
+{% if "navigation.tabs.sticky" in features %}
+  {% set class = class ~ " md-header--shadow md-header--lifted" %}
+{% elif "navigation.tabs" not in features %}
+  {% set class = class ~ " md-header--shadow" %}
+{% endif %}
+<header class="{{ class }}" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
+    <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-header__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
+      {% include "partials/logo.html" %}
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      {% set icon = config.theme.icon.menu or "material/menu" %}
+      {% include ".icons/" ~ icon ~ ".svg" %}
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            तकनीकी दस्तावेज़ साइट
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            {% if page.meta and page.meta.title %}
+              {{ page.meta.title }}
+            {% else %}
+              {{ page.title }}
+            {% endif %}
+          </span>
+        </div>
+      </div>
+    </div>
+  <!-- <form id="transcribe-form" action="/transcribe-and-translate" method="POST">
+   <div id="language_choice">
+      <select name="Select" id="language_select">
+          <option value="en">Select</option>
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+      </select>
+    </div>
+   </form>-->
+  <div class="md-header__button md-search__voice">
+    <button id="voice-button" title="Voice Search">
+    <!--  <i class="material-icons">mic</i> -->
+      <img src="{{ base_url }}/images/microphone.png" alt="Voice Search" style="width: 24px; height: 24px;">
+    </button>
+   <!-- <script src="./javascripts/app.js"></script> -->
+  </div>
+
+
+<!-- Modal for Voice Search -->
+<div id="voice-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="mic-icon">
+            <img id="modal-img" src="{{ base_url }}/images/speaknow.gif" alt="Voice Search" class="modal-image">
+            <p id="transcribed-text" style="font-weight: bold;"></p>
+    </div>
+  </div>
+</div>
+
+
+    {% if config.theme.palette %}
+      {% if not config.theme.palette is mapping %}
+        {% include "partials/palette.html" %}
+      {% endif %}
+    {% endif %}
+    {% if not config.theme.palette is mapping %}
+      {% include "partials/javascripts/palette.html" %}
+    {% endif %}
+    {% if config.extra.alternate %}
+      {% include "partials/alternate.html" %}
+    {% endif %}
+    {% if "material/search" in config.plugins %}
+      <label class="md-header__button md-icon" for="__search">
+        {% set icon = config.theme.icon.search or "material/magnify" %}
+        {% include ".icons/" ~ icon ~ ".svg" %}
+      </label>
+      {% include "partials/search.html" %}
+    {% endif %}
+    {% if config.repo_url %}
+      <div class="md-header__source">
+        {% include "partials/source.html" %}
+      </div>
+    {% endif %}
+  </nav>
+  {% if "navigation.tabs.sticky" in features %}
+    {% if "navigation.tabs" in features %}
+      {% include "partials/tabs.html" %}
+    {% endif %}
+  {% endif %}
+</header>
