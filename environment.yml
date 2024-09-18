@@ -14,5 +14,7 @@ dependencies:
     - transformers
     - datasets
     - accelerate
+    - librosa
+    - soundfile
     - pytest
     
