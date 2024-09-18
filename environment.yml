@@ -2,16 +2,16 @@ name: base
 channels:
   - defaults
   - conda-forge
-  - pytorch   # Add this channel to install PyTorch packages
+  - pytorch
 dependencies:
   - python=3.10
   - flake8
-  - pytest
   - pip
-  - torch
-  - torchvision
-  - torchaudio
-  - transformers
-  - datasets
-  - pytest
-  # Add other dependencies here
+  - pip:
+    - torch
+    - torchvision
+    - torchaudio
+    - transformers
+    - datasets
+    - pytest
+    
